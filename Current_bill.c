@@ -8,15 +8,15 @@ int main()
     {
         uc=1.20;
     }
-    else if(u>=200&&u<=400)
+    else if(u>=200&&u<400)
     {
         uc=1.50;
     }
-    else if(u>=400&&u<=600)
+    else if(u>=400&&u<600)
     {
         uc=1.80;
     }
-    else 
+    else
     {
         uc=2.00;
     }
