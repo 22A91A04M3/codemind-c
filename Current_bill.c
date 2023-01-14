@@ -1,33 +1,34 @@
 #include<stdio.h>
 int main()
 {
-    int u;
-    float uc,b,tb;
-    scanf("%d",&u);
-    if(u<200)
+    int un,uc=0;
+    scanf("%d",&un);
+    float bi,sr,tb;
+    if(un<200)
     {
-        uc=1.20;
+        bi=un*1.20;
     }
-    else if(u>=200&&u<400)
+    else if(un>=200 && un<400)
     {
-        uc=1.50;
+        bi=un*1.50;
     }
-    else if(u>=400&&u<600)
+    else if(un>=400 && un<600)
     {
-        uc=1.80;
-    }
-    else
-    {
-        uc=2.00;
-    }
-    b=u*uc;
-    if(b>400)
-    {
-        tb=b+b*0.15;
+        bi=un*1.80;
     }
     else
     {
-        tb=b+100;
+        bi=un*2.00;
     }
-    printf("%0.2f",tb);
+    if(un>=400)
+    {
+        sr=bi*0.15;
+        tb=bi+sr;
+        printf("%0.2f",tb);
+    }
+    else
+    {
+        tb=bi+100;
+        printf("%0.2f",tb);
+    }
 }
